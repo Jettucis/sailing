@@ -60,11 +60,7 @@ public class SailingDebugBoatInfoOverlay extends OverlayPanel
 			}
 
 			LocalPoint location = we.getLocalLocation();
-			String text = "ID: " + we.getWorldView().getId() +
-				" Hl: " + boat.getHullTier() +
-				" Sl: " + boat.getSailTier() +
-				" Hm: " + boat.getHelmTier() +
-				" Hk: " + boat.getSalvagingHookTier();
+			String text = boat.getDebugString();
 			Point p = Perspective.getCanvasTextLocation(client, graphics, location, text, 0);
 			if (p != null)
 			{

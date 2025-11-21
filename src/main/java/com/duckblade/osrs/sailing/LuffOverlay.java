@@ -5,18 +5,12 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Shape;
-import java.util.HashMap;
-import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;
 import net.runelite.api.Client;
 import net.runelite.api.GameObject;
-import net.runelite.api.GameState;
 import net.runelite.api.events.ChatMessage;
-import net.runelite.api.events.GameObjectDespawned;
-import net.runelite.api.events.GameObjectSpawned;
-import net.runelite.api.events.GameStateChanged;
 import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.ui.overlay.Overlay;
 import net.runelite.client.ui.overlay.OverlayLayer;
@@ -31,6 +25,7 @@ public class LuffOverlay extends Overlay
 	private static final String CHAT_LUFF_AVAILABILE = "You feel a gust of wind.";
 	private static final String CHAT_LUFF_PERFORMED = "You trim the sails, catching the wind for a burst of speed!";
 	private static final String CHAT_LUFF_ENDED = "The wind dies down and your sails with it.";
+
 
 	private final Client client;
 	private final SailingConfig config;

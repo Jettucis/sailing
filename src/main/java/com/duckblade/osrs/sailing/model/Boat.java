@@ -37,4 +37,16 @@ public class Boat
 	{
 		return salvagingHook != null ? SalvagingHookTier.fromGameObjectId(salvagingHook.getId()) : null;
 	}
+
+	public String getDebugString()
+	{
+		return String.format(
+			"Id: %d, Hull: %s, Sail: %s, Helm: %s, Hook: %s",
+			worldViewId,
+			getHullTier(),
+			getSailTier(),
+			getHelmTier(),
+			getSalvagingHookTier()
+		);
+	}
 }
