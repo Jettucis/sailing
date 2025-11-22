@@ -87,7 +87,7 @@ public class SeaChartOverlay
 	public Dimension render(Graphics2D graphics)
 	{
 		SailingConfig.ShowChartsMode mode = config.showCharts();
-		if (!SailingUtil.isSailing(client) || mode == SailingConfig.ShowChartsMode.NONE)
+		if (mode == SailingConfig.ShowChartsMode.NONE)
 		{
 			return null;
 		}
