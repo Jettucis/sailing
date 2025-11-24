@@ -10,6 +10,7 @@ import net.runelite.api.Client;
 import net.runelite.api.GameObject;
 import net.runelite.api.ObjectComposition;
 import net.runelite.api.Player;
+import net.runelite.api.WorldEntity;
 import net.runelite.api.WorldView;
 import net.runelite.api.coords.LocalPoint;
 import net.runelite.api.coords.WorldPoint;
@@ -66,14 +67,9 @@ public class SailingUtil
 			return player.getLocalLocation();
 		}
 
-		Boat boat = boatTracker.getBoat();
-		if (boat == null)
-		{
-			log.warn("getClosestWorldPoint failed due to lack of boat");
-			return player.getLocalLocation();
-		}
-
-		return boat.getWorldEntity()
+		return client.getTopLevelWorldView()
+			.worldEntities()
+			.byIndex(wv.getId())
 			.transformToMainWorld(client.getLocalPlayer().getLocalLocation());
 	}
 
