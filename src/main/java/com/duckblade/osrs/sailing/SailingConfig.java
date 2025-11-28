@@ -109,6 +109,45 @@ public interface SailingConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "safeRapidsColour",
+			name = "Safe Rapids Colour",
+			description = "Colour to highlight safely navigable rapids.",
+			section = SECTION_NAVIGATION,
+			position = 2
+	)
+	@Alpha
+	default Color safeRapidsColor()
+	{
+		return Color.CYAN;
+	}
+
+	@ConfigItem(
+			keyName = "dangerousRapidsColour",
+			name = "Dangerous Rapids Colour",
+			description = "Colour to highlight unnavigable dangerous rapids.",
+			section = SECTION_NAVIGATION,
+			position = 3
+	)
+	@Alpha
+	default Color dangerousRapidsColour()
+	{
+		return Color.RED;
+	}
+
+	@ConfigItem(
+			keyName = "unknownRapidsColour",
+			name = "Unknown Rapids Colour",
+			description = "Colour to highlight rapids rapids unknown to be navigable or not.",
+			section = SECTION_NAVIGATION,
+			position = 4
+	)
+	@Alpha
+	default Color unknownRapidsColour()
+	{
+		return Color.YELLOW;
+	}
+
+	@ConfigItem(
 		keyName = "highlightTrimmableSails",
 		name = "Highlight Trimmable Sails",
 		description = "Highlight sails when they require trimming.",
