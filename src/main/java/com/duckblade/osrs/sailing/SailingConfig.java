@@ -231,7 +231,7 @@ public interface SailingConfig extends Config
 	@ConfigItem(
 		keyName = "prioritizeCargoHold",
 		name = "Prioritize Cargo Hold",
-		description = "Make the Cargo Hold easier to click on by prioritizing it over other objects.",
+		description = "Make the Cargo Hold easier to click on by prioritizing it over other objects. Does not apply during Barracuda Trials.",
 		section = SECTION_MES,
 		position = 2
 	)
