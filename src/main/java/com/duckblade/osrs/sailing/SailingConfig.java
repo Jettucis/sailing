@@ -449,15 +449,59 @@ public interface SailingConfig extends Config
 	}
 
 	@ConfigItem(
-			keyName = "barracudaJubblyJiveShowToadyTargets",
-			name = "JJ: Show Toady Targets",
-			description = "Show which outcrops need toadies thrown at them in the Jubbly Jive course.",
-			section = SECTION_BARRACUDA_TRIALS,
-			position = 5
+		keyName = "barracudaJubblyJiveShowToadyTargets",
+		name = "JJ: Show Toady Targets",
+		description = "Show which outcrops need toadies thrown at them in the Jubbly Jive course.",
+		section = SECTION_BARRACUDA_TRIALS,
+		position = 5
 	)
 	default boolean barracudaJubblyJiveShowToadyTargets()
 	{
 		return true;
+	}
+
+	@ConfigItem(
+		keyName = "barracudaSplitsChatMessage",
+		name = "Splits Chat Message",
+		description = "Post Barracuda Trials split times to chat.",
+		section = SECTION_BARRACUDA_TRIALS,
+		position = 6
+	)
+	default boolean barracudaSplitsChatMessage()
+	{
+		return false;
+	}
+
+	@ConfigItem(
+		keyName = "barracudaSplitsOverlayPanel",
+		name = "Splits Overlay Panel",
+		description = "Show an overlay panel with Barracuda Trials split times.",
+		section = SECTION_BARRACUDA_TRIALS,
+		position = 7
+	)
+	default boolean barracudaSplitsOverlayPanel()
+	{
+		return false;
+	}
+
+	enum BarracudaSplitsToFileMode
+	{
+		OFF,
+		SILENT,
+		NOTIFY,
+		;
+	}
+
+	@ConfigItem(
+		keyName = "barracudaSplitsToFile",
+		name = "Splits to File",
+		description = "Write Barracuda Trials splits to a file.",
+		section = SECTION_BARRACUDA_TRIALS,
+		position = 8
+	)
+	default BarracudaSplitsToFileMode barracudaSplitsToFile()
+	{
+		return BarracudaSplitsToFileMode.OFF;
 	}
 
 	@ConfigItem(

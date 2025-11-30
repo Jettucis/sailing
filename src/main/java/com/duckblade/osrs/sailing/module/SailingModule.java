@@ -3,6 +3,10 @@ package com.duckblade.osrs.sailing.module;
 import com.duckblade.osrs.sailing.SailingConfig;
 import com.duckblade.osrs.sailing.features.barracudatrials.HidePortalTransitions;
 import com.duckblade.osrs.sailing.features.barracudatrials.JubblyJiveHelper;
+import com.duckblade.osrs.sailing.features.barracudatrials.splits.BarracudaSplitsTracker;
+import com.duckblade.osrs.sailing.features.barracudatrials.splits.BarracudaSplitsChatMessage;
+import com.duckblade.osrs.sailing.features.barracudatrials.splits.BarracudaSplitsOverlayPanel;
+import com.duckblade.osrs.sailing.features.barracudatrials.splits.BarracudaSplitsFileWriter;
 import com.duckblade.osrs.sailing.features.courier.CourierTaskLedgerOverlay;
 import com.duckblade.osrs.sailing.features.courier.CourierTaskTracker;
 import com.duckblade.osrs.sailing.features.facilities.CargoHoldTracker;
@@ -56,6 +60,10 @@ public class SailingModule extends AbstractModule
 	Set<PluginLifecycleComponent> lifecycleComponents(
 		@Named("developerMode") boolean developerMode,
 
+		BarracudaSplitsTracker barracudaSplitsTracker,
+		BarracudaSplitsChatMessage barracudaSplitsChatMessage,
+		BarracudaSplitsOverlayPanel barracudaSplitsOverlayPanel,
+		BarracudaSplitsFileWriter barracudaSplitsFileWriter,
 		BoatTracker boatTracker,
 		CargoHoldTracker cargoHoldTracker,
 		Castaway castaway,
@@ -91,6 +99,10 @@ public class SailingModule extends AbstractModule
 	)
 	{
 		var builder = ImmutableSet.<PluginLifecycleComponent>builder()
+			.add(barracudaSplitsTracker)
+			.add(barracudaSplitsChatMessage)
+			.add(barracudaSplitsOverlayPanel)
+			.add(barracudaSplitsFileWriter)
 			.add(boatTracker)
 			.add(castaway)
 			.add(clueCasket)

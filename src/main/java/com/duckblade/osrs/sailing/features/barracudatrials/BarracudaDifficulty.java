@@ -10,11 +10,12 @@ import net.runelite.api.gameval.VarbitID;
 public enum BarracudaDifficulty
 {
 
-	SWORDFISH(2),
-	SHARK(3),
-	MARLIN(4),
+	SWORDFISH("Swordfish", 2),
+	SHARK("Shark", 3),
+	MARLIN("Marlin", 4),
 	;
 
+	private final String name;
 	private final int inTrialVarbValue;
 
 	public static BarracudaDifficulty ofVarbitValue(int varbitValue)
@@ -41,4 +42,9 @@ public enum BarracudaDifficulty
 		return ofVarbitValue(varbitValue);
 	}
 
+	@Override
+	public String toString()
+	{
+		return name;
+	}
 }
