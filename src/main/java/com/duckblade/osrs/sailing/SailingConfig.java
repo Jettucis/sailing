@@ -1,6 +1,5 @@
 package com.duckblade.osrs.sailing;
 
-import com.duckblade.osrs.sailing.features.reversebeep.ReverseBeep;
 import java.awt.Color;
 import net.runelite.client.config.Alpha;
 import net.runelite.client.config.Config;
