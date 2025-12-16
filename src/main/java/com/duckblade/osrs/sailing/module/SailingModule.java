@@ -78,21 +78,21 @@ public class SailingModule extends AbstractModule
 		CourierTaskTracker courierTaskTracker,
 		CourierDestinationOverlay courierDestinationOverlay,
 		CrewmateOverheadMuter crewmateOverheadMuter,
+		CrystalExtractorHighlight crystalExtractorHighlight,
 		CurrentDuckTaskTracker currentDuckTaskTracker,
 		DeprioSailsOffHelm deprioSailsOffHelm,
-		HideStopNavigatingDuringTrials hideStopNavigatingDuringTrials,
 		GiantClam giantClam,
 		HidePortalTransitions hidePortalTransitions,
+		HideStopNavigatingDuringTrials hideStopNavigatingDuringTrials,
 		JubblyJiveHelper jubblyJiveHelper,
-		TemporTantrumHelper temporTantrumHelper,
 		LightningCloudsOverlay lightningCloudsOverlay,
 		LostCargoHighlighter lostCargoHighlighter,
 		LostShipment lostShipment,
 		LowHPNotification lowHPNotification,
 		LuffOverlay luffOverlay,
-		CrystalExtractorHighlight crystalExtractorHighlight,
 		MermaidTaskSolver mermaidTaskSolver,
 		MysteriousGlow mysteriousGlow,
+		NavigationOverlay navigationOverlay,
 		OceanMan oceanMan,
 		PrioritizeCargoHold prioritizeCargoHold,
 		RapidsOverlay rapidsOverlay,
@@ -103,7 +103,7 @@ public class SailingModule extends AbstractModule
 		SeaChartPanelOverlay seaChartPanelOverlay,
 		SeaChartTaskIndex seaChartTaskIndex,
 		SpeedBoostInfoBox speedBoostInfoBox,
-		NavigationOverlay navigationOverlay,
+		TemporTantrumHelper temporTantrumHelper,
 		TrueTileIndicator trueTileIndicator,
 		WeatherTaskTracker weatherTaskTracker
 	)
@@ -122,19 +122,18 @@ public class SailingModule extends AbstractModule
 			.add(courierTaskTracker)
 			.add(courierDestinationOverlay)
 			.add(crewmateOverheadMuter)
+			.add(crystalExtractorHighlight)
 			.add(currentDuckTaskTracker)
 			.add(deprioSailsOffHelm)
-			.add(hideStopNavigatingDuringTrials)
 			.add(giantClam)
 			.add(hidePortalTransitions)
+			.add(hideStopNavigatingDuringTrials)
 			.add(jubblyJiveHelper)
-			.add(temporTantrumHelper)
 			.add(lightningCloudsOverlay)
 			.add(lostCargoHighlighter)
 			.add(lostShipment)
 			.add(lowHPNotification)
 			.add(luffOverlay)
-			.add(crystalExtractorHighlight)
 			.add(mermaidTaskSolver)
 			.add(mysteriousGlow)
 			.add(navigationOverlay)
@@ -148,6 +147,7 @@ public class SailingModule extends AbstractModule
 			.add(seaChartPanelOverlay)
 			.add(seaChartTaskIndex)
 			.add(speedBoostInfoBox)
+			.add(temporTantrumHelper)
 			.add(trueTileIndicator)
 			.add(weatherTaskTracker);
 
